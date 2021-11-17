@@ -1,0 +1,34 @@
+<html>
+<head>
+<title> FORM PREVIEW </title>
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="shape">
+            <div class="image"></div>
+        </div>
+        <h1> FORM PREVIEW! </h1>
+        <h2 th:text="${user.name}"></h2>
+        <p>
+        	<!--  <span> Name: </span> <span th:text="${user.name}"> </span> <br>  -->
+			<span> Email: </span> <span th:text="${user.email}"> </span> <br>
+			<span> DOB: </span> <span th:text="${user.dob}"> </span> <br>
+			<span> ContactNo: </span> <span th:text="${user.contactNo}"> </span> <br>
+			<span> Gender: </span> <span th:text="${user.gender}"> </span> <br>
+		
+			<span> 10th Marks: </span> <span th:text="${user.tenth}"> </span> <br>
+			<span> 12th Marks: </span> <span th:text="${user.twelveth}"> </span> <br>
+			<span> UG: </span> <span th:text="${user.ug}"> </span> <br>
+			<span> PG: </span> <span th:text="${user.pg}"> </span> <br>
+		
+			<span> Certification: </span> <span th:text="${user.certifications}"> </span> <br>
+			<span> Internship: </span> <span th:text="${user.internships}"> </span> <br>
+			<span> Hobby: </span> <span th:text="${user.hobbies}"> </span> <br>
+        </p>
+    </div>
+
+
+</body>
+</html>

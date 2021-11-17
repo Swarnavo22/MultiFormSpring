@@ -1,0 +1,78 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Multipage Form</title>
+        <link rel="stylesheet" href="style2.css">
+    </head>
+    <body>
+        
+     <form class="container" action="#" th:action="@{/submit}" th:object="${user}" method="post"> 
+      <div id="div1">
+	      <div class="title">Personal Details</div>
+	      <!-- <div class="subtitle">Let's create your account!</div>  -->
+	      <div class="input-container ic1">
+	        <input type="text" id="name" placeholder="Name" th:field="*{name}" required>
+	      </div>
+	      <div class="input-container ic2">
+	        <input type="email" id="email" placeholder="Email" th:field="*{email}" required>
+	      </div>
+	      <div class="input-container ic2">
+	        <input type="date" id="dob" placeholder="DOB" th:field="*{dob}" required> 
+	       </div>
+	      <div class="input-container ic2">
+	         <input name="customerPhone" id="phone" pattern="{10}" placeholder="Phone" type="tel" th:field="*{contactNo}" required /> 
+	       </div>
+	      <div class="input-container ic2">
+	         <select name="gender" id="gen" size="1" th:field="*{gender}" required>
+                    <option th:each="p : ${professionList}" th:value="${p}" th:text="${p}" />
+              </select>
+	       </div>
+	      <div class="btn-box">
+                    <button type="button" id="next1" class="submit"> Next </button>
+                </div>
+   	 	</div>
+   	 	
+   	 	<div id="div2">
+	      <div class="title">Educational Details</div>
+	     <!-- <div class="subtitle">Let's create your account!</div> --->
+	      <div class="input-container ic1">
+	        <input th:field="*{tenth}" type="text" id="tenth" placeholder="Class 10th Percentage" required>
+	      </div>
+	      <div class="input-container ic2">
+	        <input th:field="*{twelveth}" type="text" id="twelveth" placeholder="Class 12th Percentage" required>
+	      </div>
+	      <div class="input-container ic2">
+	        <input th:field="*{ug}" type="text" id="ug" placeholder="UG CGPA" required> 
+	       </div>
+	      <div class="input-container ic2">
+	         <input th:field="*{pg}" type="text" id="pg" placeholder="PG CGPA" required>
+	       </div>
+	      <div class="btn-box">
+                    <button type="button" id="back1" class="submit"> Back </button>
+                    <button type="button" id="next2" class="submit"> Next </button>
+          </div>
+   	 	</div>
+   	 	
+   	 	<div id="div3">
+	      <div class="title">More Details</div>
+	     <!-- <div class="subtitle">Let's create your account!</div> -->
+	      <div class="input-container ic1">
+	        <input th:field="*{certifications}" type="text" placeholder="Certifications" >
+	      </div>
+	      <div class="input-container ic2">
+	        <input th:field="*{internships}"  type="text" placeholder="Internships" >
+	      </div>
+	      <div class="input-container ic2">
+	        <input th:field="*{hobbies}" type="text" placeholder="Hobbies" > 
+	      </div>
+	      <div class="btn-box">
+                    <button type="button" id="back2" class="submit"> Back </button>
+                    <button type="submit" id="submit" class="submit"> Submit </button>
+          </div>
+   	 	</div>
+   	 </form>	
+
+        <script src="./main.js">
+            
+        </script>
+    </body>
+</html>    
